@@ -7,7 +7,8 @@ body{
 }
 .bg{
 	background-image: url(../img/bg.png);
-	width: 100%;
+	background-size: cover;
+	width: auto;
 	height: 100%;
 	overflow: hidden;
 	display: block;
@@ -43,4 +44,47 @@ h1,h2,h3,h4,h5,h6{
 .center{
 	margin: 0 auto;
 	text-align: center;
+}
+
+button{
+	&.sbtn{
+		padding: 0.3rem 0.5rem;
+		border: 2px solid;
+		border-radius: 0.25rem;
+		font-size: 1rem;
+		color: @white;
+		cursor: pointer;
+		&.big{
+			padding: 0.5rem 0.75rem;
+			font-size: 1.25rem;
+		}
+		&.small{
+			padding: 0.3rem 0.5rem;
+			font-size: 0.75rem;
+		}
+		&.primary{
+			background-color: fade(@primary,20%);
+			border-color: fade(@primary, 50%);
+			&:hover{
+				background-color: fade(@primary,50%);
+				border-color: fade(@primary, 100%);
+			}
+		}
+		&.delete{
+			background-color: fade(@pink, 20%);
+			border-color: fade(@pink, 50%);
+			&:hover{
+				background-color: fade(@pink,50%);
+				border-color: fade(@pink, 100%);
+			}
+		}
+		&.apply{
+			background-color: fade(@green, 20%);
+			border-color: fade(@green, 50%);
+			&:hover{
+				background-color: fade(@green,50%);
+				border-color: fade(@green, 100%);
+			}
+		}
+	}
 }
